@@ -44,7 +44,7 @@ class PrintDetail(DetailView):
 
 class PrintUpdate(UpdateView):
     model = Print
-    fields = ['name', 'img', 'price']
+    fields = ['name', 'image', 'price']
     template_name = "print_update.html"
     def get_success_url(self):
         return reverse('print_detail', kwargs={'pk': self.object.pk})
@@ -56,9 +56,3 @@ class PrintDelete(DeleteView):
 
 
 
-# Print= [
-#     Print("Mugs","https://i.ebayimg.com/images/g/VAQAAOSwVj5bW9YZ/s-l400.jpg","5"),
-#     Print("Cards", "https://images.indianexpress.com/2019/02/valentine-day-gift_2amp.jpg","10"),
-#     Print("Photo Books", "https://cms.cloudinary.vpsvc.com//image/fetch/q_auto:eco,w_1284,f_auto,dpr_auto/https://s3-eu-west-1.amazonaws.com/sitecore-media-bucket/prod%2Fen%2F%7BF547F61F-A34D-6590-A08C-B443FD688632%7D%3Fv%3D43a51e4a29bdef19203575f899c8deb7", "20"),
-#     Print("Puzzles", "https://media.istockphoto.com/photos/hand-of-programmer-holds-puzzle-with-html-programming-language-picture-id497752600?s=612x612", "15")
-# ]
